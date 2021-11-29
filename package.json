@@ -1,0 +1,38 @@
+{
+  "name": "z3d",
+  "version": "1.0.0",
+  "description": "a 3D library base on threejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "serve": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhenghy123/Z3D.git"
+  },
+  "keywords": [
+    "threejs",
+    "z3d"
+  ],
+  "author": "zhenghy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhenghy123/Z3D/issues"
+  },
+  "homepage": "https://github.com/zhenghy123/Z3D#readme",
+  "dependencies": {
+    "three": "^0.135.0"
+  },
+  "devDependencies": {
+    "@webpack-cli/serve": "^1.6.0",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "sass-loader": "^12.3.0",
+    "scss-loader": "0.0.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  }
+}
