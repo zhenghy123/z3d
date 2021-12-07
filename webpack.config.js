@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const resolve = (function () {
 	return function (name) {
-	return	path.resolve(__dirname, name);
+		return path.resolve(__dirname, name);
 	};
 })();
 
@@ -21,6 +21,20 @@ module.exports = {
 	devServer: {
 		static: __dirname,
 	},
+	optimization: {
+		moduleIds: 'deterministic',
+		runtimeChunk: 'single',
+		splitChunks: {
+			cacheGroups: {
+				vendor: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+					chunks: 'all'
+				}
+			}
+		}
+	},
+	devtool: 'inline-source-map',
 	module: {
 		rules: [
 			{
